@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOM</title>
+<style>
+    body {
+        background-color: #46844ab3;
+        font-family: Arial
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        
+        height: 100vh;
+       
+        justify-content: center;
+        }
+
+
+</style>
+</head>
+
+
+<body>
+<h1> DOM o que é </h1>  
+<p> Aqui vai sair o resultado</p>
+
+<p>Apredendo a usar <strong>DOM em JS</strong></p>
+<div id="sms"
+> clique em mim </div>
+
+<div name="murilo"> MuriloGoes </div>
+
+<div id="mensagem"> Oi tudo bem </div>
+
+
+
+<script>
+    
+    var p1 = window.document.getElementsByTagName('p')[1] // criado a variavel p1 onde o get e pata selecionar o elemento.
+    window.document.write(p1.innerText) // ler o que ta dentro da variavel p1 , no caso o primeiro paragrafo 
+    window.document.write('aqui aprendemos ' + p1.innerText)
+    p1.style.color = 'red'
+    
+    var copor = window.document.body
+    copor.style.background = 'blue'
+    document.write(p1.innerHTML) // mostra com as formatacoes do html as frases
+    var d = window.document.getElementById('sms') // criei uma variavel para chamar um id , onde com isso vou poder estilizar 
+    d.style.color = 'green' // deixando minha dive de outra cor
+    d.innerText = 'estou aqui' // mudei conteudo da fala 
+    window.document.getElementById('sms').innerHTML = 'ola mundo' // em uma so linha chamei o elemento e o que ele vai receber4
+
+    var m = window.document.getElementsByName('murilo')[0] // como esta no plural, deve se colocar o []
+    m.style.color ='green' 
+
+// pode ser acessado tambem pela clas getelementsbyclasname()  vc que decide 
+
+    var mm = window.document.querySelector('div#mensagem') // aqui estou fazendo por seletor, queryselectorall chama mais de 1 
+    mm.style.color = 'green'
+
+
+
+
+
+</script>
+</body>
+</html> 
+
+
+
+<!--
+window.document.write('olá mundo')
+window.document.write(window.document.title)
+window.document.write(window.document.URL)
+window.document.write(window.document.charset)
+// selecionar por marca
+
+window.document.getElementsByTagName('head')  // seleciomar varios elementos  -->
