@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de numeros </title>
+</head>
+<body>
+    <h1> Somade valores</h1>
+    <input type="number" name="txtn1"  id="txtn1"> +  <!--É um campo para que o usuário ou usuária possa inserir algum texto, data, número, cor, etc.
+     possui como principais atributos type, que recebe como valor o tipo do input. -->
+    <input type="number" id="txtn2" name="txtn2" >
+    <input type="button" value="somar" onclick="somar()"> <!-- O atributo value descreve descreve um rótulo maior, designado para ser usado perto de 
+    um botão de escolha,--> 
+    <div id="resultadoo">
+        Resultado
+    </div>
+
+    <script>
+     function somar() {
+        var tn1 = window.document.getElementById("txtn1")
+        var tn2 = window.document.getElementById("txtn2")
+        var resul = window.document.getElementById("resultadoo")
+        var n1 = Number(tn1.value) // o valeu e valor de texto que esta no tn1
+        var n2 = Number(tn2.value) // o valeu e valor de texto que esta no tn2
+        var s = n1 + n2
+        resultadoo.innerHTML = `a soma de ${n1}  + ${n2} sera igual a ${s}`
+
+     }
+
+    </script>
+</body>
+</html>
