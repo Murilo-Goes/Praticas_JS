@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: Arial, sans-serif;
-        background-color: #87457e;
-        margin: 0;
-    }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #87457e;
+            margin: 0;
+        }
 
-    div#area {
-        width: 200px;
-        height: 100px;
-        background-color: #f5f5f5;
-        border: 2px solid #333;
-        border-radius: 20px;
-        padding: 1px;
-        text-align: center;
-        cursor: pointer;
-        text-shadow: #333 1px 1px 1px;
-        transition: background-color 0.3s ease-in-out;
-        font-size: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-        line-height: 100px;
-    }
+        div#area {
+            width: 200px;
+            height: 100px;
+            background-color: #f5f5f5;
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 1px;
+            text-align: center;
+            cursor: pointer;
+            text-shadow: #333 1px 1px 1px;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            line-height: 100px;
+        }
     </style>
 </head>
+
 <body>
-    <div id="area" onclick="clicar()">  <!-- acao para funcao , eventos podem ficar no html ou diretamente no script-->
+    <div id="area">  <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair() -->
+        <!-- acao para funcao , eventos podem ficar no html ou diretamente no script-->
         Interagir
     </div>
     <script>
+        var ar = document.getElementById('area') // coloquei para fora da funcao para qualquer funcao acessar ela.
+        ar.addEventListener (`click`, clicar) //  variavel mais essa acao que fica olhando os eventos diretamente no JS
+        ar.addEventListener(`mouseenter`, entrar)
+        ar.addEventListener(`mouseout`, sair)
+
+        
         function clicar() { // quando for chamado o clicar no evento, a funcao vai ser realizada.
-            var ar = document.getElementById("area");
+            
             ar.innerText = 'clicou'
+            ar.style.background ='red' // muda a cor do background para vermelho quando clicar.
+        }
+        function entrar() {
+            ar.innerText = 'entrou'
+
+
+        }
+        function sair() {
+            ar.innerText = 'fui'
+            ar.style.background = 'blue' // muda a cor do background para azul quando sair do evento. 
         }
     </script>
 </body>
+
 </html>
+
+
