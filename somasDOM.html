@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de soma</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #87457e;
+            margin: 0;
+        }
+
+            
+            
+    </style>
+    <p>Treinos de soma </p>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="button" value="somar" onclick="somar()">
+     
+    <div id="resultado">
+       <p>Resultado</p>
+
+    </div>
+
+    <script>
+        function soma() {
+            var nume1 = document.getElementById("num1")
+            var nume2 = document.getElementById("num2")
+            var resultado = document.getElementById("resultado")
+            var n1 = Number(nume1.value)
+            var n2 = Number(nume2.value)
+            var s = n1 + n2
+            resultadoo.innerHTML = `a soma de ${n1}  + ${n2} sera igual a ${s}`
+        }
+    </script>
+    
+</body>
+</html>
