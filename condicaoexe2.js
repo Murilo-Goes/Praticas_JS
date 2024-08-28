@@ -1,5 +1,5 @@
-var time = 'ganhar'
-
+var time = 'empatar'
+console.log ( `Fortale ganhar ${time}` )
 if (time == 'perder') {
     console.log('O time é mais fraco de caldo de bila');
 } if (time == 'ganhar') {
