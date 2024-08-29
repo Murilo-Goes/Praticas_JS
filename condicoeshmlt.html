@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Condicoes no html
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: burlywood;
+            color: white;
+            padding: 20px;
+            text-align: center;
+
+
+        }
+    </style>
+   
+
+
+
+    <h1> Sistema de multas</h1>
+    Velocidade do carro <input type="number" id="velocidade"> km/h
+    <input type="button" value="Multa" onclick="calcular()">
+
+    <div id="res">
+        <p>Resultado</p>
+
+    </div>
+    <script>
+
+        function calcular() {
+            var v = document.getElementById('velocidade')
+            var re = document.getElementById('res')
+            var v2 = Number(v.value)
+            res.innerHTML = `Sua velocidade é de ${v2}`
+            if (v2 <= 60){
+                res.innerHTML += `<p> vc esta dentro do permetido <p>`
+            }
+            else if (v2 > 60 && v2 <= 80) {
+                res.innerHTML += `<p> multa de 100 reais <p>`
+            }
+            res.innerHTML += `<p> dirija sempre com seguraca <p>`
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
