@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de Condições</title>
+    <style>
+        body {
+            background-color: rgb(138, 66, 66);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        div {
+            margin: 20px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 350px;
+            background-color: #3c0f0f;
+            text-align: left;
+            display: flex;
+            margin-right: 300px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease-in-out;
+            overflow: hidden;
+            margin-left: 800px;
+        }
+
+        .fot-img {
+            width: 200px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            opacity: 0.7; /* Controla a transparência */
+            margin-left: 10px; /* Espaço entre o texto e a imagem */
+            vertical-align: middle;
+            border-radius: 30px;
+        }
+
+        .vovo-img {
+            width: 200px; /* Ajuste o tamanho conforme necessário */
+            height: 100px;
+            opacity: 0.7; /* Controla a transparência */
+            margin-left: 10px; /* Espaço entre o texto e a imagem */
+            vertical-align: middle;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Que time vai ganhar</h1>
+    <p>Escolha o placar e ganhe um pix de 1 milhão</p>
+    
+    Fortaleza <img src="../imagens/leao.jpg" alt="imagemfortaleza" class="fot-img"> <input type="number" id="leao">
+    Ceara <img src="../imagens/vozao.png" alt="imagemceara" class="vovo-img"> <input type="number" id="Vovo">
+    <input type="button" value="Apostar" onclick="calcular()">
+    
+    <div id="result">
+        <p>Resultado:</p>
+    </div>
+    
+    <script>
+    function calcular() {
+        var f = document.getElementById("leao");
+        var c = document.getElementById("Vovo");
+        var r = Number(f.value);
+        var v = Number(c.value);
+        var res = document.getElementById("result");
+        
+        if (r > v) {
+            res.innerText = "Fortaleza venceu!";
+        } else if (r < v) {
+            res.innerText = "Ceará venceu!";
+        } else {
+            res.innerText = "Empatou!";
+        }
+        
+        res.innerHTML = `O resultado foi: ${r} x ${v}`;
+    }
+    </script>
+</body>
+</html>
